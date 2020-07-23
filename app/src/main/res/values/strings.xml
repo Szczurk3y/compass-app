@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Compass</string>
+    <string name="direction_latitude_text">Direction Latitude</string>
+    <string name="direction_longitude_text">Direction Longitude</string>
+    <string name="compass_image">Compass Image</string>
+    <string name="pointing_arrow_text">pointing_arrow</string>
+    <string name="latitude_text">Latitude</string>
+    <string name="longitude_text">Longitude</string>
+    <string name="current_latitude_text">Current latitude</string>
+    <string name="current_longitude_text">Current longitude</string>
+    <string name="enter_location_text">Enter location</string>
+    <string name="enter_latitude_text">Enter latitude</string>
+    <string name="enter_longitude_text">Enter longitude</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="cancel_button">Cancel</string>"Complete all the fields."
+    <string name="update_destination_error">Complete all the fields.</string>
+    <string name="permissionsLatitudeNeeded">Permissions are needed \n to show latitude\n (click here for more info)</string>
+    <string name="permissionsLongitudeNeeded">Permissions are needed \n to show longitude\n (click here for more info)</string>
+</resources>

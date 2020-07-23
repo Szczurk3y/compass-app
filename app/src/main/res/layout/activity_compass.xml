@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".view.compass.CompassActivity">
+    <TextView
+        android:id="@+id/direction_latitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/direction_latitude_text"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/direction_longitude"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/direction_longitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/direction_longitude_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/direction_latitude" />
+
+    <ImageView
+        android:id="@+id/compass_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/compass_image"
+        android:src="@drawable/compass"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/compass_needle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/pointing_arrow_text"
+        android:src="@drawable/compass_needle"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/compass_arrow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/pointing_arrow_text"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <Button
+        android:id="@+id/latitudeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="@string/latitude_text"
+        app:layout_constraintBottom_toTopOf="@id/current_latitude"
+        app:layout_constraintEnd_toStartOf="@+id/longitudeButton"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_optimizationLevel="chains" />
+
+    <Button
+        android:id="@+id/longitudeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/longitude_text"
+        app:layout_constraintBottom_toTopOf="@id/current_longitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/latitudeButton"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_optimizationLevel="chains" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/latitudeButton"
+        android:id="@+id/current_latitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/current_latitude_text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/current_longitude"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/current_longitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/current_longitude_text"
+        app:layout_constraintTop_toBottomOf="@id/longitudeButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/current_latitude"
+        android:clickable="true"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
