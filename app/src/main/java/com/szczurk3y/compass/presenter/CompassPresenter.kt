@@ -34,6 +34,11 @@ class CompassPresenter: BasePresenter<CompassContract.View>(), InputDialog.Resul
         InputDialog(this, R.string.confirm_button, R.string.cancel_button).show(fragmentManager, "Enter location")
     }
 
+    override fun locationChanged(latitude: String, longitude: String) {
+        CompassStore.currentLatitude = latitude.toFloat()
+        CompassStore.currentLongitude = longitude.toFloat()
+    }
+
     override fun requestPermission() {
         val permissionFineLocation = ContextCompat.checkSelfPermission(
             getView()?.getViewActivity()!!, Manifest.permission.ACCESS_FINE_LOCATION)

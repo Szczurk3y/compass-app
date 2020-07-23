@@ -97,6 +97,7 @@ class CompassActivity : AppCompatActivity(), Compass.SensorListener, Gps.Locatio
     override fun onGpsLocationChanged(latitude: String, longitude: String) {
         this.current_latitude.text = latitude
         this.current_longitude.text = longitude
+        presenter.locationChanged(latitude, longitude)
     }
 
     override fun onRequestPermissionsResult(

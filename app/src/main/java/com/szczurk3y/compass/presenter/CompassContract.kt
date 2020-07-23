@@ -10,6 +10,7 @@ interface CompassContract {
         fun rotateArrow(fromAzimuth: Float, toAzimuth: Float)
         fun updateDestination(fragmentManager: FragmentManager)
         fun requestPermission()
+        fun locationChanged(latitude: String, longitude: String)
         fun onPermissionResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
     }
 
