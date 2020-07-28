@@ -35,4 +35,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/enterLatitude" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancel_buttom"
+        android:text="@string/cancel_button"
+        app:layout_constraintTop_toBottomOf="@id/enterLongitude"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintRight_toLeftOf="@id/confirm_buttom"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/confirm_buttom"
+        android:text="@string/confirm_button"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/enterLongitude"
+        app:layout_constraintRight_toRightOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

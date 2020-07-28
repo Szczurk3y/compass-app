@@ -16,4 +16,5 @@
     <string name="update_destination_error">Complete all the fields.</string>
     <string name="permissionsLatitudeNeeded">Permissions are needed \n to show latitude\n (click here for more info)</string>
     <string name="permissionsLongitudeNeeded">Permissions are needed \n to show longitude\n (click here for more info)</string>
+    <string name="input_dialog_title">Enter direction</string>
 </resources>

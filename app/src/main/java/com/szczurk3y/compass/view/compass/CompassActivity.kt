@@ -30,7 +30,7 @@ class CompassActivity : AppCompatActivity(), Compass.SensorListener, Gps.Locatio
 
         val sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
 
-        Compass(this, sensorManager)
+//        Compass(this, sensorManager)
 
         presenter.requestPermission()
     }

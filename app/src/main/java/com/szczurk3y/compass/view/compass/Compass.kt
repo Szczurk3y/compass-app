@@ -4,9 +4,10 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import android.os.AsyncTask
 import com.szczurk3y.compass.model.CompassStore
 
-class Compass(
+class Compass (
     private val listener: SensorListener,
     sensorManager: SensorManager
 ) : SensorEventListener {

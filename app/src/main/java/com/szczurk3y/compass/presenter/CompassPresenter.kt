@@ -31,7 +31,7 @@ class CompassPresenter: BasePresenter<CompassContract.View>(), InputDialog.Resul
     }
 
     override fun updateDestination(fragmentManager: FragmentManager) {
-        InputDialog(this, R.string.confirm_button, R.string.cancel_button).show(fragmentManager, "Enter location")
+        InputDialog(this, R.string.input_dialog_title).show(fragmentManager, "Enter location")
     }
 
     override fun locationChanged(latitude: String, longitude: String) {
